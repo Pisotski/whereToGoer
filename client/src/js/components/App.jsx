@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import BubbleGrid from './BubbleGrid';
 import Search from './Search';
 import { collectionModifier } from '../../../../helpers/clientHelpers';
@@ -13,12 +14,28 @@ class App extends React.Component {
       collection: {
         'Meals Served': true,
         'Type of Food': true,
-        Music: true,
+        Pizza: true,
         Cuisine: true,
         HackReactor: true,
       },
     };
     this.userChoiceHandler = this.userChoiceHandler.bind(this);
+    this.getPlace = this.getPlace.bind(this);
+  }
+
+  getPlace() {
+    const { userPref } = this.state;
+    axios.get('/places', {
+      params: {
+        categories: userPref,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   userChoiceHandler(category) {
@@ -39,7 +56,7 @@ class App extends React.Component {
           <BubbleGrid collection={collectionModifier(this.state.collection)} userChoiceHandler={this.userChoiceHandler} />
         </div>
         <div>
-          <Search />
+          <Search getPlace={this.getPlace} />
         </div>
       </div>
     );

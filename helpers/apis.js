@@ -3,12 +3,15 @@ const { yelpCredentials } = require('../keys/yelp/config');
 
 const client = yelp.client(yelpCredentials.API_Key);
 
-const restaurantMatch = function (category) {
+const placeMatch = function (category) {
   return client.search({
     term: category,
     location: 'San Francisco',
     limit: 10,
-  })
+  });
 };
 
-module.exports = { restaurantMatch };
+const placeInfo = function (placeId) {
+  return client.business(placeId);
+};
+module.exports = { placeMatch, placeInfo };

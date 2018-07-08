@@ -3,8 +3,8 @@ import '../../css/search.css';
 
 
 const Search = props => (
-  <button className="search">
-      Find place
+  <button className="search" onClick={props.getPlace}>
+    Find place
   </button>
 );
 

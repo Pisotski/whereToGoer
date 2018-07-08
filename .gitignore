@@ -8,6 +8,8 @@ node_modules
 
 ## CREDENCIALS ##
 config.js
+keys
+bundle.js
 
 pids
 *.pid
