@@ -19,10 +19,10 @@
     line-height: 150px;
     border-radius: 50%;
     font-size: 15px;
-    color: red;
+    color: black;
     line-height: 700%;
     text-align: center;
-    background: #000
+    background: rgba(51, 247, 67, 0.671);
 }
 
 .bubble-item-1 {
@@ -33,8 +33,19 @@
     line-height: 150px;
     border-radius: 50%;
     font-size: 15px;
-    color: red;
+    color: black;
     line-height: 700%;
     text-align: center;
-    background: #000
+    background: rgba(51, 247, 67, 0.671);
+}
+.bubble-display-none {
+    display: none;
+}
+
+.bubble-item-0:hover {
+    box-shadow: 0 0 20px rgba(225, 241, 7, 0.973); 
+}
+
+.bubble-item-1:hover {
+    box-shadow: 0 0 20px rgba(225, 241, 7, 0.973); 
 }

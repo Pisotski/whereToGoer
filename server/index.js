@@ -18,6 +18,12 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 
 app.get('/places', (req, res) => {
   const categories = req.query.categories[0];
+  if (categories === 'HackReactor') {
+    res.status(200).json({
+      name: 'Tempest',
+      image_url: 'https://s3-media3.fl.yelpcdn.com/bphoto/hQoz_p7_sCdEtQVSLAm3Sw/o.jpg',
+    });
+  }
   placeMatch(categories)
     .then((response) => {
       const list = response.jsonBody.businesses;

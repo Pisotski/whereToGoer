@@ -17,3 +17,6 @@
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.search:hover {
+    text-shadow: 0 0 20px rgba(225, 241, 7, 0.973); 
+}

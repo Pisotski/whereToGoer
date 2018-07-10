@@ -21,10 +21,10 @@ class App extends React.Component {
       collection: {
         'Meals Served': true,
         'Type of Food': true,
-        Pizza: true,
         Cuisine: true,
         HackReactor: true,
       },
+      bubbleSize: -1,
     };
     this.userChoiceHandler = this.userChoiceHandler.bind(this);
     this.getPlace = this.getPlace.bind(this);
@@ -63,9 +63,9 @@ class App extends React.Component {
   }
 
   userChoiceHandler(category) {
-    this.state.userPref = this.state.userPref.concat([category]);
-    this.state.collection[category] = false;
-    this.setState({});
+    this.setState({
+      userPref: [category],
+    });
   }
 
   render() {
@@ -78,7 +78,7 @@ class App extends React.Component {
         WhereToGoer
         </div>
         <div>
-          <BubbleGrid collection={collectionModifier(this.state.collection)} userChoiceHandler={this.userChoiceHandler} />
+          <BubbleGrid bubbleSize={this.state.bubbleSize} collection={collectionModifier(this.state.collection)} userChoiceHandler={this.userChoiceHandler} />
         </div>
         <div>
           <Search getPlace={this.getPlace} />
