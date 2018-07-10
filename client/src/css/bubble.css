@@ -11,9 +11,23 @@
     justify-content: space-around;
 }
 
-.bubble-item {
-    width: 15%;
-    height: 15%;
+.bubble-item-0 {
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    margin-top: 10px;
+    line-height: 150px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: red;
+    line-height: 700%;
+    text-align: center;
+    background: #000
+}
+
+.bubble-item-1 {
+    width: 100px;
+    height: 100px;
     padding: 5px;
     margin-top: 10px;
     line-height: 150px;

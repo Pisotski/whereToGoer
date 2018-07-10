@@ -1,0 +1,36 @@
+#results-container {
+    position: relative;
+    background-color: rgba(104, 207, 199, 0.432);
+    padding: 0px;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    object-fit: cover;
+}
+.results-img {
+    height: 200px;
+    width: 100%;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@-webkit-keyframes glow {
+    from { text-shadow: 0 0 0px rgb(123, 255, 0); }
+    to { text-shadow: 0 0 20px rgb(174, 0, 255); }
+}
+.results-name {
+    font-family: Apple Chancery, cursive;
+    font-size: 32px;
+    margin: 10px;
+    margin-bottom: 10px; 
+    text-align: center;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: glow;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: glow;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}

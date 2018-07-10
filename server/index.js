@@ -20,7 +20,7 @@ app.get('/places', (req, res) => {
   const categories = req.query.categories[0];
   placeMatch(categories)
     .then((response) => {
-      const list = response.jsonBody.businesses.map(business => business.name);
+      const list = response.jsonBody.businesses;
       const lucky = Math.floor(Math.random() * list.length);
       res.status(200).json(list[lucky]);
     })
